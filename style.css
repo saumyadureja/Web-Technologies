@@ -1,0 +1,283 @@
+* {
+ margin:0;
+ padding:0;
+}
+html, body {
+height: 100%;
+}
+.section1 {
+height: 110px;
+}
+.thyme{
+text-align: center;
+color:#9A7D0A;
+font-family: helvetica;
+font-size: 30px;
+letter-spacing: 10px;
+line-height: 60px;
+height: 15px;
+
+}
+.header {
+color:#000000;
+font-family: helvetica;
+}
+#ad1 {
+margin-left:50px;
+height: 5px;
+font-size: 10px;
+}
+#ad2 {
+margin-left:50px;
+line-height:30px;
+height: 5px;
+font-size: 10px;
+}
+
+nav {
+
+width:100%;
+height: 40px;
+
+}
+nav a{
+
+line-height:139px;
+color:#000000;
+font-size: 10px;
+height: 40px;
+float:left;
+width:18%;
+text-align:center;
+text-decoration:none;
+font-family: Helvetica;
+}
+hr
+{
+ position: relative;
+ top: 52px;
+}
+
+.section2 {
+background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg");
+height: 350px;
+width: 656px;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position:-190px 10px;
+overflow: hidden;
+
+}
+
+.section3 {
+width:656;
+height: auto;
+}
+.leftcol{
+width: 328px;
+float: left;
+margin-left:0;
+
+}
+.lb1 {
+
+margin-left: 70px;
+margin-top: 40px;
+
+}
+
+.rightcol{
+width: 328px;
+float: left;
+margin-right:0;
+
+}
+
+.lb2{
+
+margin-right: 70px;
+margin-top: 20px;
+margin-left: 10px;
+
+}
+
+.img3 {
+   height: auto;
+   width: 250px;
+   margin :70px 27px 25px 70px;
+   float: left;
+   }
+.img2 {
+      height: 120px;
+   width: 250px;
+   margin-left: 70px;
+}
+.img1 {
+height: auto;
+width: 250px;
+margin-left: 10px;
+margin-top: 55px;
+}
+.img4 {
+height: 232px;
+width: 250px;
+padding-top: 20px;
+margin-left: 10px;
+}
+.img7{
+ height: auto;
+ width: 516px;
+ margin-left: 70px;
+ margin-top: 25px;
+
+}
+.heading2{
+
+font-size:8;
+font-family:Helvetica;
+color:#000000;
+letter-spacing:1px;
+padding-bottom: 15px;
+
+}
+.subheading1 {
+font-size: 20px;
+font-family:"Times New Roman";
+color:#9A7D0A;
+font-weight:bold;
+}
+.subheading11 {
+font-size: 20px;
+font-family:"Times New Roman";
+color:#9A7D0A;
+font-weight:bold;
+}
+.subheading2 {
+
+font-size: 20px;
+font-family:"Times New Roman";
+color:#9A7D0A;s
+font-weight:bold;
+
+
+}
+
+.para2 {
+font-size:8;
+font-family:"Times New Roman";
+
+}
+.para1 {
+font-size:8;
+font-family:"Times New Roman";
+margin-top: 5px;
+
+}
+.mag {
+font-size:10;
+font-family:"Helvetica";
+margin-top: -60px;
+}
+.res {
+font-size:20px;
+font-family:"Times New Roman";
+color:#9A7D0A;
+font-weight:bold;
+
+}
+.subheading11 {
+font-size:20px;
+font-family:"Times New Roman";
+color:#9A7D0A;
+font-weight:bold;
+line-height: 28px;
+
+}
+#l1 {
+font-size: 8;
+font-family:"Helvetica";
+}
+
+#l2 {
+font-size: 8;
+font-family:"Helvetica";
+line-height: 20px;
+
+}
+#l3 {
+color: #9A7D0A;
+}
+.box
+{
+     border: 1px solid white;
+     background-color: white;
+     width: 210px;
+     height: 90px;
+     position: relative;
+     bottom: 200px;
+     left: 230px;
+
+
+}
+
+.text {
+     position: relative;
+     bottom: 300px;
+     left: -5px;
+    right: 800px;
+    top: 30px;
+    text-align: center;
+   }
+
+#l4 {
+
+
+    font-family:"bookman old style";
+    font-size: 18px;
+    line-height: 24px;
+
+   }
+.text1 {
+ padding-bottom: 20px;
+ text-align: center;
+}
+.section3 a:hover {
+color:#C0C0C0;
+}
+.section3 a {
+text-decoration:none;
+color:#000;
+}
+.section4 {
+height: 52%;
+background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg");
+background-size: cover;
+width: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: -5px -15px;
+margin-top: 5px;
+}
+
+.section5 {
+height: 20%;
+background-color: #9A7D0A;
+}
+.footer {
+text-align: right;
+color: white;
+font-family: Helvetica;
+}
+#ph {
+ margin-right: 70px;
+ font-size:8;
+ font-weight: bold;
+ position: relative;
+ top:20px;
+}
+#pi {
+  margin-right: 147px;
+  font-size:8;
+  font-weight:bold;
+  line-height:5px;
+ }
