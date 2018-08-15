@@ -1,0 +1,179 @@
+html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+		.c1 {text-align: center;}
+
+	</style>
+	<script type="text/javascript">
+	var flag=0;
+
+		function fileExists(url)
+		{
+
+
+		    try{
+		    var http = new XMLHttpRequest();
+		    http.open('HEAD', url, false);
+		    http.send();
+		    var status=http.status;
+			}
+			catch(err){
+
+			}
+		    if(status == 200){
+		    	flag=1;
+		    }
+
+		    return flag;
+
+
+		}
+		function load(f)
+		{
+		     var URL = f.URL.value;
+
+
+			if(URL=="")
+				alert("This is a required field");
+			else
+			{
+			  var flag=fileExists(URL);
+			  if (flag==0)
+			  	alert("File doesn't exist");
+
+
+			  if(flag==1) {
+
+
+
+			   var request = new XMLHttpRequest();
+
+			   request.open("GET", URL, false);
+			   request.send();
+
+
+
+
+
+			     var my_JSON_object = JSON.parse(request.responseText);
+
+
+               var html_text="<html><head><title>Top Trucking Companies</title><style>table,th,td {border:solid 0.5px #000;} th {font-weight:bold;}</style></head><body>";
+
+               var data=my_JSON_object.Mainline.Table.Header.Data;
+
+
+               html_text+="<table>";
+			   html_text+="<tr>";
+
+				for(i=0;i<data.length;i++){
+
+					html_text+="<th>"+data[i]+"</th>";
+
+
+				}
+				html_text+="</tr>";
+
+			     rows=my_JSON_object.Mainline.Table.Row;
+
+                 if(typeof rows != "undefined" && rows.length >0)
+
+                     {
+				           for(i=0;i<rows.length;i++)
+                         {
+		                            rowlist=rows[i];
+	                                html_text+="<tr>";
+                                    var r_keys = Object.keys(rowlist);
+                                    for(j=0;j<r_keys.length;j++)
+	                                   {
+                 	                       prop = r_keys[j];
+                 	                       if(prop=="Hubs")
+                 	                     {
+
+
+
+							                html_text+="<td><ul>";
+
+							                var check=0;
+							                for(var key in rowlist[prop])
+							                 {
+
+							                     var hub=rowlist[prop][key];
+
+
+
+							                     for(k=0;k<hub.length;k++)
+							                    {
+							                       if(k==0 && check==0)
+							                           {
+
+							                           check=check+1;
+							                           html_text+="<li><b>"+hub[0]+"</b></li>";
+
+							                            }
+							                       else
+							                       {
+							                            html_text+="<li>"+hub[k]+"</li>";
+							                       }
+							                  }
+						               }
+							           html_text+="</ul></td>";
+
+							           continue;
+
+					                  }
+	                                       if(prop=="Logo")
+		                                   {
+
+							                   var x=300;
+							                   var y=150;
+						                       html_text+="<td><img src='"+rowlist[prop]+"' width='"+x+"' height=auto></td>";
+						                       continue;
+						                   }
+						                  else if(prop=="HomePage")
+						                  {
+						                      html_text+="<td><a href="+rowlist[prop]+">"+rowlist[prop]+"</a></td>";
+						                      continue;
+						                  }
+						                  else
+						                  	  html_text+="<td>"+rowlist[prop]+"</td>";
+	                       	           }
+	                                html_text+="</tr>";
+                            }
+
+
+				           html_text+="</table>";
+				            hw4=window.open("","assignment 4", "scrollbars=yes,resizable=yes,width=850,height=800");
+                            hw4.document.write(html_text,"</body></html>");
+                            hw4.document.close();
+			       }
+
+			         else
+			       	          {
+			       	          	alert("No Trucking Companies");
+                              }
+
+
+
+              }
+
+        }
+
+ }
+
+		</script>
+	     </head>
+		</html>
+		<body>
+		<div class="c1">
+        <h2>Enter URL for Trucking List JSON </h2>
+        <form name="form1"  method="post" >
+        <input type="text" name="URL" size="30"  maxlength="20"/>
+    <br>
+    <br>
+    <input type="submit" name="submit" value="Submit Query" onClick="load(this.form)"/>
+     </form>
+     </body>
+     </div>
+     </html>
